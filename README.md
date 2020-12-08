@@ -3,9 +3,9 @@ A service sample file
 
 > This Config file is a basic example on how to execute a script during a boot time and auto-restart program on systemd Linux 
 
----
 
 ## Usage
+---
 
 
 ### Step 1: Create foo.service in /etc/systemd/system
