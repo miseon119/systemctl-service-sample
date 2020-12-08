@@ -1,0 +1,16 @@
+[Unit]
+Description= Your App description 
+StartLimitIntervalSec=150 
+StartLimitBurst=10
+
+[Service]
+ExecStart=/your/script/path/foo.sh
+#Restart=on-failure
+Restart=always
+RestartSec=5s
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/your/run/user/1000/gdm/Xauthority"
+
+[Install]
+WantedBy=multi-user.target
+Alias=foo.service
