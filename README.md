@@ -53,12 +53,17 @@ $ sudo chmod 755 foo.service
 $ sudo systemctl  daemon-reload
 ```
 
-### Step 5: Start Your App Service
+### Step 5: Enable Your App Service
+```console
+$ sudo systemctl enable foo.service
+```
+
+### Step 6: Start Your App Service
 ```console
 $ sudo systemctl start foo.service
 ```
 
-### Step 6: Check your service status
+### Step 7: Check your service status
 ```console
 $ sudo systemctl status foo.service
 ```
