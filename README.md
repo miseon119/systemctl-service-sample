@@ -33,6 +33,7 @@ $ touch apc.service
 
 
 `RestartSec`: Time to sleep before restarting a service.
+
 `StartLimitIntervalSec` `StartLimitBurst` [reference](https://www.freedesktop.org/software/systemd/man/systemd.service.html) 
 
 + If your app needs to display GUI window, you need to add `Environment`.
@@ -40,7 +41,8 @@ $ touch apc.service
 Environment="DISPLAY=:0"
 ```
 
-You need to find your `XAUTHORITY` path. Just type `echo $XAUTHORITY` to check.
+You need to find your `XAUTHORITY` path. 
+Just type `echo $XAUTHORITY` to check.
 ```
 Environment="XAUTHORITY=/yourPath/Xauthority"
 ```
