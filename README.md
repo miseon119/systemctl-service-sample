@@ -18,7 +18,9 @@ $ touch apc.service
 
 ### Step 2: Modify your foo.service file
 `Description` : Your app simple description.
+
 `ExecStart` : Your app or shell script path.
+
 `Restart` : Restart [options](https://www.freedesktop.org/software/systemd/man/systemd.service.html) 
 
 | Restart settings/Exit causes | always |  on-success | on-failure | on-abnormal | on-abort | on-watchdog |
