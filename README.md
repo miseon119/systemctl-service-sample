@@ -13,7 +13,7 @@ A service sample file
 $ cd /etc/systemd/system
 ```
 ```console
-$ touch apc.service
+$ touch foo.service
 ```
 
 ### Step 2: Modify your foo.service file
