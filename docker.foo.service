@@ -1,0 +1,19 @@
+[Unit]
+Description= foo container
+After=docker.service
+Wants=network-online.target docker.socket
+Requires=docker.socket
+
+[Service]
+#ExecStartPre=-/usr/bin/docker stop foo
+ExecStart=/usr/bin/docker run --gpus all --rm --name foo --privileged --network host --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix  -v /etc/localtime:/etc/localtime:ro  your_docker_image
+User=ubuntu
+Group=ubuntu
+Restart=always
+RestartSec=5s
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/run/user/1000/gdm/Xauthority"
+
+[Install]
+WantedBy=multi-user.target
+Alias=docker.foo.service
