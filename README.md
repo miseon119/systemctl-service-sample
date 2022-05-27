@@ -5,8 +5,6 @@ A service sample file
 
 
 ## Usage
----
-
 
 ### Step 1: Create foo.service in /etc/systemd/system
 ```console
@@ -71,3 +69,9 @@ $ sudo systemctl start foo.service
 ```console
 $ sudo systemctl status foo.service
 ```
+
+---
+
+## service file parameter
+
+`network-online.target`: is a target that actively waits until the nework is "up", where the definition of "up" is defined by the network management software.   [more](https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/)
